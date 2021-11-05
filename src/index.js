@@ -176,7 +176,7 @@ class App extends React.Component {
     return expandedimg;
   };
     
-  <script src="https://cdn.jsdelivr.net /npm/handtrackjs@latest /dist/handtrack.min.js"></script>
+  import * as handTrack from 'handtrackjs';
   const model =  await handTrack.load();
   const predictions = await model.detect(img); 
 
