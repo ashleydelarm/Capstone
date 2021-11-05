@@ -175,10 +175,7 @@ class App extends React.Component {
     const expandedimg = tfimg.transpose([0,1,2]).expandDims();
     return expandedimg;
   };
-    
-  import * as handTrack from 'handtrackjs';
-  const model =  await handTrack.load();
-  const predictions = await model.detect(img); 
+     
 
   buildDetectedObjects(scores, threshold, boxes, classes, classesDir) {
     const detectionObjects = []
