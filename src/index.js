@@ -16,14 +16,110 @@ async function load_model() {
   }
 
 let classesDir = {
+    0: {
+        name: 'A',
+        id: 0,
+    },
     1: {
-        name: 'Kangaroo',
+        name: 'B',
         id: 1,
     },
     2: {
-        name: 'Other',
+        name: 'C',
         id: 2,
-    }
+    },
+    3: {
+        name: 'D',
+        id: 3,
+    },
+    4: {
+        name: 'E',
+        id: 4,
+    },
+    5: {
+        name: 'F',
+        id: 5,
+    },
+    6: {
+        name: 'G',
+        id: 6,
+    },
+    7: {
+        name: 'H',
+        id: 7,
+    },
+    8: {
+        name: 'I',
+        id: 8,
+    },
+    9: {
+        name: 'J',
+        id: 9,
+    },
+    10: {
+        name: 'K',
+        id: 10,
+    },
+    11: {
+        name: 'L',
+        id: 11,
+    },
+    12: {
+        name: 'M',
+        id: 12,
+    },
+    13: {
+        name: 'N',
+        id: 13,
+    },
+    14: {
+        name: 'O',
+        id: 14,
+    },
+    15: {
+        name: 'P',
+        id: 15,
+    },
+    16: {
+        name: 'Q',
+        id: 16,
+    },
+    17: {
+        name: 'R',
+        id: 17,
+    },
+    18: {
+        name: 'S',
+        id: 18,
+    },
+    19: {
+        name: 'T',
+        id: 19,
+    },
+    20: {
+        name: 'U',
+        id: 20,
+    },
+    21: {
+        name: 'V',
+        id: 21,
+    },
+    22: {
+        name: 'W',
+        id: 22,
+    },
+    23: {
+        name: 'X',
+        id: 23,
+    },
+    24: {
+        name: 'Y',
+        id: 24,
+    },
+    25: {
+        name: 'Z',
+        id: 25,
+    },
 }
 
 class App extends React.Component {
@@ -152,7 +248,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Real-Time Object Detection: Kangaroo</h1>
+        <h1>Real-Time Object Detection: ASL ALphabet</h1>
         <h3>MobileNetV2</h3>
         <video
           style={{height: '600px', width: "500px"}}
