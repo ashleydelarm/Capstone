@@ -135,6 +135,9 @@ class App extends React.Component {
           video: {
             facingMode: "user"
           }
+            video.style.cssText = "-moz-transform: scale(-1, 1); \
+            -webkit-transform: scale(-1, 1); -o-transform: scale(-1, 1); \
+            transform: scale(-1, 1); filter: FlipH;";
         })
         .then(stream => {
           window.stream = stream;
