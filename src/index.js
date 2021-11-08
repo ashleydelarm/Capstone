@@ -252,21 +252,21 @@ class App extends React.Component {
         <h1>Real-Time Object Detection: ASL ALphabet</h1>
         <h3>MobileNetV2</h3>
         <video
-          style={{height: '1002px', width: "835px"}}
+          style={{height: '600px', width: "500px"}}
           className="size"
           autoPlay
           playsInline
           muted
           ref={this.videoRef}
-          width="1002"
-          height="835"
+          width="600"
+          height="500"
           id="frame"
         />
         <canvas
           className="size"
           ref={this.canvasRef}
-          width="1002"
-          height="835"
+          width="600"
+          height="500"
         />
       </div>
     );
