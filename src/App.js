@@ -16,8 +16,8 @@ function App() {
   const runCoco = async () => {
     // 3. TODO - Load network 
     // e.g. const net = await cocossd.load();
-    // https://github.com/ashleydelarm/Capstone/blob/a8b0128ba717912e70c6275af380e1f65001ed2e/model/model.json
-    const net = await tf.loadGraphModel('https://github.com/ashleydelarm/Capstone/blob/a8b0128ba717912e70c6275af380e1f65001ed2e/model/model.json')
+    // https://signrecognitioncnnmodel.s3.us-east.cloud-object-storage.appdomain.cloud/model.json
+    const net = await tf.loadGraphModel('https://signrecognitioncnnmodel.s3.us-east.cloud-object-storage.appdomain.cloud/model.json')
     
     //  Loop and detect hands
     setInterval(() => {
@@ -46,14 +46,12 @@ function App() {
       canvasRef.current.height = videoHeight;
 
       // 4. TODO - Make Detections
-      // e.g. const obj = await net.detect(video);
       const img = tf.browser.fromPixels(video)
       const resized = tf.image.resizeBilinear(img, [640,480])
       const casted = resized.cast('int32')
       const expanded = casted.expandDims(0)
       const obj = await net.executeAsync(expanded)
       console.log(obj)
-
 
       // Draw mesh
       const ctx = canvasRef.current.getContext("2d");
@@ -66,7 +64,6 @@ function App() {
       tf.dispose(casted)
       tf.dispose(expanded)
       tf.dispose(obj)
-
     }
   };
 
